@@ -13,7 +13,7 @@ std::unique_ptr<std::size_t> unique_number(std::size_t number) {
 }
 
 /**
- * Для разделения массива на два
+ * Для разделения массива на два по четности индекса
  */
 std::unique_ptr<char[]> split(const char* input, std::size_t size, bool is_left) {
     std::unique_ptr<char[]> array(new char[size/2 + 1]);
