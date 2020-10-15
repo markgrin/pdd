@@ -67,9 +67,17 @@ int main (int argc, const char** argv) {
             input_index = (input_index + 1) % 2;
         }
         std::size_t result = ((*high_point) << 32) | (*low_point >> 32);
-        std::cout << result << "\n";
+        if (std::to_string(result) == argv[2]) {
+            std::cout << "OK\n";
+            return 0;
+        } else {
+            std::cout << "DENY\n";
+            return 1;
+        }
     });
     main_thread.join();
+    
+
     return 0;
 }
 
